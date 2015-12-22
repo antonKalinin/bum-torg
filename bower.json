@@ -1,0 +1,10 @@
+{
+  "name": "bum-torg.ru",
+  "description": "Website for local business",
+  "version": "1.0.0",
+  "homepage": "http://bum-torg.ru",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

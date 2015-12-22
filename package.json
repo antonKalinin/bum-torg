@@ -1,0 +1,19 @@
+{
+  "name": "bum-torg",
+  "version": "1.0.0",
+  "description": "Web site for local business",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonKalinin/bum-torg.git"
+  },
+  "author": "Anton Kalinin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonKalinin/bum-torg/issues"
+  },
+  "homepage": "http://bum-torg.ru",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
+}
