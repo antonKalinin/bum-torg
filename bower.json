@@ -5,6 +5,8 @@
   "homepage": "http://bum-torg.ru",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "bootstrap": "latest",
+    "moderinzr": "latest"
   }
 }
