@@ -318,9 +318,9 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/banner.jpg);
-    background-position: center -150px;
-    background-repeat: repeat;
+    background: url(../images/banner.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
