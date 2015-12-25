@@ -14,6 +14,8 @@
   "homepage": "http://bum-torg.ru",
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "multer": "^1.1.0",
+    "nodemailer": "^1.10.0"
   }
 }

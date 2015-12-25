@@ -1,15 +1,4 @@
 $(document).ready(function() {
-    // Header Scroll
-    $(window).on('scroll', function() {
-        var scroll = $(window).scrollTop();
-
-        if (scroll >= 50) {
-            $('#header').addClass('fixed');
-        } else {
-            $('#header').removeClass('fixed');
-        }
-    });
-
     // Flexslider
     $('.flexslider').flexslider({
         animation: "fade",
@@ -22,9 +11,11 @@ $(document).ready(function() {
 
     $(window).on('scroll', function () {
         var cur_pos = $(this).scrollTop();
+
         sections.each(function() {
-            var top = $(this).offset().top - 76
+            var top = $(this).offset().top - 76,
                 bottom = top + $(this).outerHeight();
+
             if (cur_pos >= top && cur_pos <= bottom) {
                 nav.find('a').removeClass('active');
                 nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
@@ -50,19 +41,61 @@ $(document).ready(function() {
         $('.nav-toggle').toggleClass('close-nav');
         nav.toggleClass('open');
     });
+
+    // Form sending
+    $('#order-form').submit(function(event) {
+        var $form = $(this),
+            formData = new FormData(this),
+            closeAlert = function() {
+                setTimeout(function() { 
+                    $form.find('.alert').removeClass('alert-success alert-danger').html('');
+                }, 5000);
+            };
+
+        event.preventDefault();
+
+        $.ajax({
+            url: '/order',
+            type: 'POST',
+            data: formData,
+            mimeType: "multipart/form-data",
+            contentType: false,
+            processData: false,
+            success: function(data) {
+                $form.find('input[type=text], textarea').val('');
+                $form.find('.alert')
+                    .addClass('alert-success')
+                    .html('Заявка успешно отправлена. Мы обязательно с вами свяжемся.');
+
+                closeAlert();
+            },
+            error: function() {
+                $form.find('.alert')
+                    .addClass('alert-danger')
+                    .html('Извините, во время отправки произошла ошибка. Попробуйте еще раз.');
+            
+                closeAlert();
+            }
+        });
+
+        return false;
+    });
 });
 
 ymaps.ready(init);
 
 function init () {
     var myMap = new ymaps.Map("map", {
-            center: [58.521475, 31.275475],
-            zoom: 10
+            center: [58.558107, 31.253134],
+            zoom: 13
         }, {
 
         });
 
-    myMap.geoObjects.add(new ymaps.Placemark([55.826479, 37.487208], {
-        balloonContent: 'цвет <strong>фэйсбука</strong>'
-    }));
+    myMap.geoObjects.add(new ymaps.Placemark([58.558107, 31.253134], {
+        balloonContent: 'Сырковское шоссе д.30, Великий Новгород'
+    }, {
+        preset: 'islands#dotIcon',
+        iconColor: 'red'
+    }))
 }

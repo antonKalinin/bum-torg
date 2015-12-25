@@ -39,9 +39,9 @@ h5 {
     font-size: 13px;
     font-weight: 600;
     border: 0;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
+    -moz-border-radius: 24px;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -122,28 +122,27 @@ ul li {
     text-decoration: none;
     text-transform: uppercase;
 }
-#header .phone {
+#header .phone-wrapper {
     float: left;
-    margin-left: 40px;
-    font-size: 14px;
+    margin: -14px 0 -14px 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#header .phone {
+    color: #FFA726;
     font-weight: 700;
-    color: #000;
     text-decoration: none;
     text-transform: uppercase;
-    padding-top: 7px;
 }
 #header .phone-time {
-    float: left;
+    display: block;
     margin-left: 10px;
-    font-size: 14px;
-    color: #FF9800;
-    padding-top: 7px;
+    font-size: 13px;
+    color: #000;
 }
 #header.fixed {
     background-color: #fff;
-}
-#header.fixed a {
-    color: #000;
 }
 #header.fixed .header-content {
     border-bottom: 0;
@@ -176,7 +175,7 @@ ul li {
     text-transform: uppercase;
 }
 .navigation a:hover, .navigation a.active {
-    color: #fff;
+    color: #64DD17;
 }
 .nav-toggle {
     display: none;
@@ -319,9 +318,10 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-    background-image: url(../images/banner.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/banner.jpg);
     background-position: center -150px;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -337,7 +337,6 @@ ul li {
     font-family: "Open Sans", Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px black;
 }
 .banner-text h2 {
     display: inline-block;
@@ -345,7 +344,6 @@ ul li {
     margin: 0 0 40px;
     color: #fff;
     font-family: "Open Sans", Arial, sans-serif;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .banner-text p {
@@ -360,9 +358,10 @@ ul li {
      Serives
 -------------------------------------------------------------------------------*/
 .service-section {
-    padding: 50px 0 0;
+    padding: 50px 0 50px;
 }
 .service-section .section-title {
+    color: #FF9800;
     margin-bottom: 70px;
 }
 .services {
@@ -383,18 +382,26 @@ ul li {
 /* ------------------------------------------------------------------------------
     Oreder form
 -------------------------------------------------------------------------------*/
-.orderForm {
+#order {
+    background-image: url('../images/handmadepaper.png');
+    background-repeat: repeat;
+    padding-top: 60px;
+}
+
+.order-form {
     text-align: center;
 }
-.orderForm h4 {
+.order-form h4 {
+    margin-bottom: 40px;
+    color: #64DD17;
     font-weight: 700;
     font-size: 24px;
 }
-.orderForm p {
+.order-form p {
     text-align: center;
     margin: 7%;
 }
-.orderForm input {
+.order-form input {
     color: #797979;
     padding: 15px 30px;
     border: none;
@@ -405,14 +412,14 @@ ul li {
     border-bottom: #e0e0e0 1px solid;
     font-size: 15px;
 }
-.orderForm input[type="submit"] {
+.order-form input[type="submit"] {
     margin-top: 20px;
     color: #fff;
 }
-.orderForm input.noMarr {
+.order-form input.noMarr {
     margin-right: 0px;
 }
-.orderForm textarea {
+.order-form textarea {
     color: #797979;
     padding: 15px 30px;
     margin-bottom: 18px;
@@ -424,7 +431,7 @@ ul li {
     border: none;
     border-bottom: #e0e0e0 1px solid;
 }
-.orderForm .submitBnt {
+.order-form .submitBnt {
     background: #3bc492;
     color: #fff;
     margin-top: 30px;
@@ -439,7 +446,7 @@ ul li {
     display: inline-block;
     text-transform: uppercase;
 }
-.orderForm .submitBnt:hover {
+.order-form .submitBnt:hover {
     background: #3d3d3d;
     color: #fff;
 }
@@ -463,7 +470,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 #contact {
-    padding: 0;
+    padding: 50px 0 0;
 }
 
 .phone-number {
@@ -475,7 +482,7 @@ ul li {
 
 #map {
     width: 100%; 
-    height: 500px;
+    height: 450px;
     padding: 0; 
     margin: 15px 0 0 0;
 }
