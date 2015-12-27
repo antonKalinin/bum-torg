@@ -73,9 +73,6 @@
     .footer .footer-col {
         margin-bottom: 50px;
     }
-    .services {
-        margin-left: 7%;
-    }
     #contact {
         text-align: center;
     }
@@ -89,9 +86,6 @@
     }
     .banner-text {
         padding-top: 35%;
-    }
-    .services {
-        margin-left: 50px;
     }
     #contact {
         text-align: center;
@@ -109,6 +103,12 @@
     }
     .banner-text h1 {
         font-size: 32px;
+    }
+    #header .phone-wrapper {
+        margin-top: 0;
+    }
+    #header .phone-time:first-of-type{
+        display: none;
     }
 }
 @media screen and (max-width: 320px) {
