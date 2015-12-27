@@ -39,7 +39,10 @@ $(document).ready(function() {
     }); 
     nav.find('a').on('click', function() {
         $('.nav-toggle').toggleClass('close-nav');
-        nav.toggleClass('open');
+
+        if ($(this).parents('.banner-text').length == 0) {
+            nav.toggleClass('open');
+        }
     });
 
     // Form sending
