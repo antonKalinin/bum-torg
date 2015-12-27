@@ -149,7 +149,7 @@ ul li {
     padding: 25px 0;
 }
 #header.fixed .nav-toggle {
-    top: 25px;
+    top: 20px;
     color: #000;
 }
 .navigation.open {
@@ -328,7 +328,7 @@ ul li {
     height: 470px;
 }
 .banner-text {
-    padding-top: 20%;
+    padding-top: 14%;
 }
 .banner-text h1 {
     margin-bottom: 40px;
@@ -354,6 +354,14 @@ ul li {
     margin-top: 30px;
     margin-bottom: 80px;
 }
+
+.banner-text .bum-icon-recycle {
+    display: inline-block;
+    width: 80px;
+    height: 78px;
+    background-image: url('../images/icon_recycle.png');
+    background-repeat: no-repeat;
+}
 /* ------------------------------------------------------------------------------
      Serives
 -------------------------------------------------------------------------------*/
@@ -378,6 +386,34 @@ ul li {
     flex: 0 0 1;
     color: #00aeda;
     font-size: 50px;
+    text-align: center;
+}
+
+.services .bum-icon, 
+.services .icon {
+    width: 85px;
+}
+
+.services .bum-icon {
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services .bum-icon-cards {
+    background-image: url('../images/icon_cards.png');
+}
+
+.services .bum-icon-gruzchik {
+    background-image: url('../images/icon_gruzchik.png');
+}
+
+.services .bum-icon-vesy {
+    background-image: url('../images/icon_vesy.png');
+}
+
+.services .bum-icon-car {
+    background-image: url('../images/icon_car.png');
 }
 /* ------------------------------------------------------------------------------
     Oreder form

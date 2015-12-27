@@ -6,6 +6,9 @@
     #header.fixed a {
         color: #000;
     }
+    .banner-text {
+        padding-top: 22%;
+    }
     .nav-toggle {
         display: block;
     }
@@ -71,7 +74,7 @@
         margin-bottom: 50px;
     }
     .services {
-        margin-left: 50px;
+        margin-left: 7%;
     }
     #contact {
         text-align: center;
