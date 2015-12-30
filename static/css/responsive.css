@@ -3,11 +3,14 @@
         width: 90%;
         padding: 40px 0;
     }
+    #header .phone-wrapper {
+        float: right;
+    }
     .banner-text {
         padding-top: 22%;
     }
     .nav-toggle {
-        display: block;
+        display: none;
     }
     .navigation {
         position: fixed;
